@@ -1,4 +1,4 @@
-package com.array.problems.capitalone;
+package com.strings.problems;
 
 public class Palindrome {
 
