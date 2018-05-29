@@ -55,7 +55,7 @@ public class BreadthFirstSearch {
 		System.out.println("\n\n"); 
 		
 		TreeNode tn = TreeNode.createTree();
-		bfsOnGenericTree(tn);
+	//	bfsOnGenericTree(tn);
 		
 		
 		

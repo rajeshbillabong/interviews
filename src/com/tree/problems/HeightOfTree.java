@@ -41,7 +41,7 @@ public class HeightOfTree {
 		System.out.println("\n\n"); 
 
 		TreeNode tn = TreeNode.createTree();
-		System.out.println( "Tree height="+ heightOfNTree(tn));
+		System.out.println( "NTree height="+ heightOfNTree(tn));
 
 
 

@@ -18,7 +18,7 @@ public class CountLeafInBinaryTree {
 	
 	public static void main(String[] args){ 
 		
-	 	BinaryTree bt = BinaryTree.createBinaryTree(); 
+	 BinaryTree bt = BinaryTree.createBinaryTree(); 
 	 System.out.println( "Count ="+ 	getLeafCount(bt));  
 	}
 

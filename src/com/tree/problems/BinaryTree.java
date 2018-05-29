@@ -86,5 +86,11 @@ public static BinaryTree createBinaryTree(){
 	
 	
 }
+@Override
+public String toString() {
+	return "BinaryTree [data=" + data + ", leftNode=" + leftNode + ", rightNode=" + rightNode + "]";
+}
+
+
 
 }
