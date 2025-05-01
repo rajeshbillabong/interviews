@@ -32,7 +32,28 @@ public class AddUpToSum {
 		System.out.println("HOHO");
 		
 		int[] arr = {2,11,7,15};
-		System.out.println(solution(arr,9)[0]+","+solution(arr,9)[1]);
+		//System.out.println(solution(arr,9)[0]+","+solution(arr,9)[1]);
+		solution2(arr,9);
+	}
+	
+	
+	public static void solution2(int[] arr,int target) {
+		
+		Map<Integer,Integer> map = new HashMap();
+		for(int i=0;i<arr.length;i++) {
+			
+			System.out.println("i="+i+" arr[i]="+arr[i]);
+			if(map.containsKey(target-arr[i])) {
+				map.put(arr[i], i);
+
+				System.out.println("found location="+i+","+map.get(target-arr[i]));
+
+			}
+			else
+				map.put(arr[i], i);
+		}
+		
+		System.out.println("map="+map);
 	}
 	
 }

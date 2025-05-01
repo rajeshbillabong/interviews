@@ -31,7 +31,7 @@ public static boolean isRotatedStringUsingConcat(String s1, String s2) {
 		for(int j=i-1;j<i+s1.length();j++) {
 			int temp = i-1;
 			System.out.println("j="+j);
-			System.out.println( "combined.charAt(temp++)="+combined.charAt(temp)+", s1.charAt(j)"+s1.charAt(j));
+			//System.out.println( "combined.charAt(temp++)="+combined.charAt(temp)+", s1.charAt(j)"+s1.charAt(j));
 
 			if(combined.charAt(temp++) != s1.charAt(j)) {
 				System.out.println("CONTINUE");

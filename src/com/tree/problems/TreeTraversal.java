@@ -77,7 +77,7 @@ public class TreeTraversal {
 		while(!stack.isEmpty() || current != null) {
 			
 			if(current != null) {
-				System.out.print(current.data+",");
+				System.out.println(current.data+",");
 				stack.push(current);
 				current = current.leftNode;
 			}else {

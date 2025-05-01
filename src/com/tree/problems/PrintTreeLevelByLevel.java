@@ -18,9 +18,12 @@ public class PrintTreeLevelByLevel {
 	        {   
 	            System.out.print(qe.peek().data);
 	            System.out.print("  ");
+	            
 	            if(qe.peek().getLeftNode()!=null) qe.add(qe.peek().getLeftNode());
 	            if(qe.peek().getRightNode()!=null) qe.add(qe.peek().getRightNode());
-	            qe.remove(); count = count -1;
+	            qe.remove(); 
+	            
+	            count = count -1;
 	            if(count == 0 )
 	            {
 	                System.out.println("  ");
@@ -34,12 +37,37 @@ public class PrintTreeLevelByLevel {
 			BinaryTree bt = BinaryTree.createBinaryTree(); 
 			
 			printLevelOrder(bt);
-			
+			printLevelPractice(bt);
 			 
 			System.out.println("\n\n");  
 
 
 
 		}
+	    
+	    
+	    public static void printLevelPractice(BinaryTree root) {
+	    	if(root == null) return;
+	    	
+	    	Queue<BinaryTree> q = new LinkedList<BinaryTree>();
+	    	q.add(root);
+	    	
+	    	int count =1;
+	    	
+	    	while(!q.isEmpty()) {
+	    		System.out.print("val="+q.peek().data);
+	    		
+	    		if(q.peek().leftNode != null) q.add(q.peek().leftNode);
+	    		if(q.peek().rightNode !=null) q.add(q.peek().rightNode);
+	    		
+	    		q.remove();
+	    		count = count -1;
+	            if(count == 0 )
+	            {
+	                System.out.println("  ");
+	                count = q.size();
+	            }
+	    	}
+	    }
 	    
 	}

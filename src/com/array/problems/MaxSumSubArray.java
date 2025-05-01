@@ -17,14 +17,10 @@ public class MaxSumSubArray {
 			currentSum = currentSum+arr[i];
 			if(currentSum > MAXSUM) {
 				MAXSUM = currentSum;
-				end++;
+				end=i;
 			}
 			
-			if(currentSum<0) {
-				currentSum = 0;
-				start =i+1;
-				end=i+1;
-			}
+			 
 			
 		}
 		
@@ -35,7 +31,7 @@ public class MaxSumSubArray {
 	
 	public static void main(String [] args) {
 		
-		int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
+		int[] arr = {-2,-1,-3,-4,-1,-2,-1,-5,-4,-8};
 		
 		findMaxSubArr(arr);
 		

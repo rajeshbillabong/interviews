@@ -22,7 +22,8 @@ public class StringSegmentationDictionary {
 		// words from the wordList
 		for (int i = 1; i <= wordLen; i++) {
 			String prefix = word.substring(0, i);
-
+				System.out.println("prefix="+prefix+" contains is="+wordList.contains(prefix));
+			
 			if (wordList.contains(prefix)
 					&& wordBreak(wordList, word.substring(i))) {
 				return true;
@@ -31,11 +32,21 @@ public class StringSegmentationDictionary {
 
 		return false;
 	}	
+	
+	public static boolean mysolution(List<String> wordList, String str){
+		
+		int count =0;
+		for(int i=0;i<str.length();i++) {
+			String sub = str.substring(i);
+		}
+		
+		return false;
+	}
 
 	public static void main(String[] args)
 	{
 		List<String> wordList = Arrays.asList(
-				"mobile", "samsung0", "sam", "sung0", "man",
+				"mobile", "likesamsung", "sam5", "sung", "man",
 				"mango", "icecream", "and", "go", "i", "like",
 				"ice", "cream");
 

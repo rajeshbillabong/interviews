@@ -1,5 +1,10 @@
 package com.tree.problems;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.List;
+
 public class BinaryTree {
 int data;
 
@@ -31,8 +36,8 @@ public void setRightNode(BinaryTree rightnode) {
 /*
  * 
  * 
- *                  8
- * 				  /	  \ 
+ *                 __8__
+ * 				  /	    \ 
  * 				38	     83	
  * 			  /    \    /   \
  * 			84     85  86    87
@@ -86,8 +91,36 @@ public static BinaryTree createBinaryTree(){
 	
 	
 }
+
+public List<List<Integer>> levelOrder(BinaryTree root) {
+    List<List<Integer>> res = new ArrayList<>();
+    Deque<BinaryTree> q = new ArrayDeque<>();
+    if (root != null) {
+        q.add(root);
+    }
+
+    while (!q.isEmpty()) {
+        List<Integer> val = new ArrayList<>();
+
+        for (int i = 0, len = q.size(); i < len; i++) {
+            BinaryTree node = q.poll();
+            val.add(node.data);
+            if (node.leftNode != null) {
+                q.add(node.leftNode);
+            }
+            if (node.rightNode != null) {
+                q.add(node.rightNode);
+            }
+        }
+        System.out.println(" level="+val.toString());
+        res.add(val);
+    }
+    return res;
+}
 @Override
 public String toString() {
+	System.out.println("Level:");
+ 	
 	return "BinaryTree [data=" + data + ", leftNode=" + leftNode + ", rightNode=" + rightNode + "]";
 }
 
